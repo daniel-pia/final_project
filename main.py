@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    c = sum(1,2)
+    c = sum(3,4)
 
 
     return f"<p style='color:red'>Hello, World!</p>"
