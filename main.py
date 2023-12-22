@@ -26,9 +26,9 @@ def web_sum():
     return f"<p>c= {c}</p>"
 
 
-@app.route('/post/<float:post_id>')
+@app.route('/post/<float(signed = True):post_id>') 
 def show_post(post_id):
-    
+    #<float(signed=True):lat> the way for get negative values in the web page
     with open("data.txt", "a") as file:
         file.write(f"{post_id}\n")
 
@@ -61,7 +61,7 @@ def plot_data():
     buf = io.BytesIO()
     plt.savefig(buf, format='png')
     buf.seek(0)
-
+    plt.close()
     # Step 4: Return the buffer in the response
     return send_file(buf, mimetype='image/png')
 
