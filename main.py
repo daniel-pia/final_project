@@ -53,9 +53,9 @@ def plot_data():
     # Step 2: Generate the plot
     plt.figure()
     plt.plot(data)  # Adjust this according to how you want to plot your data
-    plt.xlabel('X-axis label')
-    plt.ylabel('Y-axis label')
-    plt.title('Your Plot Title')
+    plt.xlabel('Time [s]')
+    plt.ylabel('Power [w]')
+    plt.title('Power consumed by Sirius 510 platform')
 
     # Step 3: Save plot to a buffer
     buf = io.BytesIO()
