@@ -72,9 +72,9 @@ def show_plot():
     data = np.loadtxt('data.txt')
     plt.figure()
     plt.plot(data)
-    plt.xlabel('X-axis label')
-    plt.ylabel('Y-axis label')
-    plt.title('Your Plot Title')
+    plt.xlabel('Time [s]')
+    plt.ylabel('Power [w]')
+    plt.title('Power consumed by Sirius 510 platform')
 
     # Convert plot to a base64 string
     buf = io.BytesIO()
